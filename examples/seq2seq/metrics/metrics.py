@@ -148,7 +148,7 @@ class ScrollsWrapper(Metric):
 
 def download_metric():
     # here we load the custom metrics
-    scrolls_metric_path = hf_hub_download(repo_id="datasets/tau/scrolls", filename="metrics/scrolls.py")
+    scrolls_metric_path = hf_hub_download(repo_id="tau/scrolls", filename="metrics/scrolls.py", repo_type='dataset')
     updated_scrolls_metric_path = (
         os.path.dirname(scrolls_metric_path) + os.path.basename(scrolls_metric_path).replace(".", "_") + ".py"
     )
